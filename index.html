@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>Color Typewriter</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/jquery.color-2.1.2.min.js"></script>
+		<script src="js/jquery.ns-autogrow.min.js"></script>
+		<script src="js/color-typewriter.js"></script>
+	</head>
+
+	<body>
+        <textarea id="text" name="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="showMouse"></textarea>
+
+		<script type="text/javascript">
+			$( document ).ready(function() {
+
+				$('#text').autogrow({vertical: true, horizontal: false});
+				$('#text').select();
+				$('#text').focus();
+
+				$(document).controlColorFade({
+					animationTime: 20000,
+					delayTime: 0
+				});
+
+				$(document).controlCursor();
+
+				$(document).controlScrollbar();
+			});
+
+		</script>
+	</body>
+</html>
